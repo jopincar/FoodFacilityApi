@@ -35,8 +35,8 @@ I considered using the new "minmal" option but stuck with the tried and true MVC
 - log the request and response from SF data service
 - put things like the URI in the appsettings files
 - create a test base class to DRY the tests
-- used an API token to query the SF data to avoid potential throttling described in https://dev.socrata.com/consumers/getting-started.html
-- injected a service for the SF data into the controller to allow mocking for unit tests allowing return of specific data instead of relying on the live data
+- use an API token to query the SF data to avoid potential throttling described in https://dev.socrata.com/consumers/getting-started.html
+- inject a service for the SF data into the controller to allow mocking for unit tests allowing return of specific data instead of relying on the live data
 
 I spent about 4 hours on this solution.
 
