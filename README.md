@@ -20,7 +20,7 @@ The API provides an OpenAPI/Swagger UI that documents the API and allows easy te
 - https://timdeschryver.dev/blog/how-to-test-your-csharp-web-api#a-simple-test was used as the basis for the integration tests
 
 ## Design Discussion
-I considered using the new "minmal" option but stuck with the tried and true MVC style since I was already familiar with it, although minimal might have been more appropriate for a small set of requirements like these.  I chose to implement only functional/integration tests which I feel give the most coverage with the least code.  As a result, I didn't have to inject service implementations into the controller, although these would be required to support true unit tests with mocks  I didn't want to pollute the API with a bunch of special-purpose operations, so I implemented a single GET operation that takes query parameters.
+I considered using the new "minmal" option but stuck with the tried and true MVC style since I was already familiar with it, although minimal might have been more appropriate for a small set of requirements like these.  I chose to implement only functional/integration tests which I feel give the most coverage with the least code.  As a result, I didn't have to inject service implementations into the controller, although these would be required to support true unit tests with mocks.  I didn't want to pollute the API with a bunch of special-purpose operations, so I implemented a single GET operation that takes query parameters.
 
 ## Critiques
 - implement request and response logging via an action filter
