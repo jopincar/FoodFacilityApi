@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using GeoCoordinatePortable;
+using System.Text.Json.Serialization;
 
 namespace FoodFacilityApi.Models
 {
@@ -34,5 +35,11 @@ namespace FoodFacilityApi.Models
 		public double? latitude { get; set; }
 		[JsonInclude]
 		public double? longitude { get; set; }
+
+		public double DistanceFrom(double latitude, double longitude)
+		{
+			var curLoc = new GeoCoordinate(latitude, longitude);
+			return curLoc.GetDistanceTo(new GeoCoordinate(this.latitude ?? 0, this.longitude ?? 0));
+		}
 	}
 }

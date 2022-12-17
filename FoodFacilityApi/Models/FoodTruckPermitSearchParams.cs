@@ -11,6 +11,12 @@ namespace FoodFacilityApi.Models
 		public double? longitude { get; set; }
 		public int? distance_in_meters { get; set; }
 
+		public int? max_return { get; set; }
+
+		public bool SortByDistance() {
+			return latitude.HasValue && longitude.HasValue && distance_in_meters.HasValue; ;
+		}
+
 		internal string ToQueryString()
 		{
 			var ret = "";
@@ -27,7 +33,7 @@ namespace FoodFacilityApi.Models
 				ret += $"&$where=address%20like%20%27%25{address}%25%27";
 			}
 
-			if ( latitude.HasValue && longitude.HasValue ) {
+			if ( SortByDistance() ) {
 				ret += $"&$where=within_circle(Location,%20{latitude},%20{longitude},%20{distance_in_meters})";
 			}
 
