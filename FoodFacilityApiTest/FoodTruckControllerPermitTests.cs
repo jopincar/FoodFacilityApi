@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace FoodFacilityApiTest
 {
-	public class FoodTruckControllerTests : IClassFixture<WebApplicationFactory<FoodFacilityApi.Program>>
+	public class FoodTruckPermitControllerTests : IClassFixture<WebApplicationFactory<FoodFacilityApi.Program>>
 	{
 		[Fact]
 		public async Task GetPermitsByApplicantAndStatus()
