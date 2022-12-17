@@ -9,7 +9,15 @@ Given the data about Mobile Food Facilities in San Francisco (https://data.sfgov
 - We write automated tests and we would like you to do so as well.
 
 ## Problem Solution
-This solution was created using Visual Studio 2022 and contains two .NET 7 projects: an ASP.NET Core Web API project and an xUnit Test Project.  Simply open the solution and press F5 while in the API project to view the Swagger.  Right-click the test project and select run tests to run the tests.  The API contains a single controller class and two model classes.  All of the requirements are met by passing various combinations of values for FoodTruckPermitSearchParams properties which are translated into requests against the SF food facility API endpoint.  Refer to ...\FoodFacilityApiTest\FoodTruckControllerPermitTests.cs for the specifics of each requirement.
+This solution was created using Visual Studio 2022 and contains two .NET 7 projects: an ASP.NET Core Web API project and an xUnit Test Project.  Simply open the solution and press F5 while in the API project to view the Swagger.  
+
+![Swagger](Swagger.png)
+
+Right-click the test project and select run tests to run the tests.
+
+![Tests](Tests.png)
+
+The API contains a single controller class and two model classes.  All of the requirements are met by passing various combinations of values for FoodTruckPermitSearchParams properties which are translated into requests against the SF food facility API endpoint.  Refer to ...\FoodFacilityApiTest\FoodTruckControllerPermitTests.cs for the specifics of each requirement.
 
 ## Bonus
 The API provides an OpenAPI/Swagger UI that documents the API and allows easy testing via "try it now."  This API can be run via the dockerfile.
